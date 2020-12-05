@@ -30,7 +30,7 @@ ls
 pwd
 
 # support building from GDAL's source tree too
-if [ ! -f "configure"]; then
+if [ ! -f "configure" ]; then
     cd gdal
 fi
 
