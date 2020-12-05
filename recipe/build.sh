@@ -28,12 +28,11 @@ fi
 
 
 # support building from GDAL's source tree too
-CONFIGURE="configure"
-if [ ! -f "$CONFIGURE"]; then
-    CONFIGURE="gdal/configure"
+if [ ! -f "configure"]; then
+    cd gdal
 fi
 
-bash "$CONFIGURE" --prefix=${PREFIX} \
+bash configure --prefix=${PREFIX} \
                --host=${HOST} \
                --with-curl \
                --with-dods-root=${PREFIX} \
