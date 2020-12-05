@@ -20,6 +20,7 @@ requirements:
     - pkg-config >=0.21  # [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make  # [not win]
   host:
     - cfitsio
     - curl
@@ -140,6 +141,7 @@ outputs:
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake  # [win]
+        - make  # [not win]
       host:
         - python
         - pip

@@ -26,7 +26,14 @@ fi
 # `--without-pam` was removed.
 # See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
 
-bash configure --prefix=${PREFIX} \
+
+# support building from GDAL's source tree too
+CONFIGURE="configure"
+if [ ! -f "$CONFIGURE"]; then
+    CONFIGURE="gdal/configure"
+fi
+
+bash "$CONFIGURE" --prefix=${PREFIX} \
                --host=${HOST} \
                --with-curl \
                --with-dods-root=${PREFIX} \
