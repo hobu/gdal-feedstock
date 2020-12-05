@@ -26,6 +26,8 @@ fi
 # `--without-pam` was removed.
 # See https://github.com/conda-forge/gdal-feedstock/pull/47 for the discussion.
 
+ls
+pwd
 
 # support building from GDAL's source tree too
 if [ ! -f "configure"]; then
